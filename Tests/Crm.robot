@@ -4,7 +4,7 @@ Resource    ../Resources/Amazon.robot
 Resource    ../Resources/Common.robot
 
 *** Variables ***
-
+# add you variables here
 *** Test Cases ***
 User must sign in to check out
     [Documentation]    This is some basic info about the test
