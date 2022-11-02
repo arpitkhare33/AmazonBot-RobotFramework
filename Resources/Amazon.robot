@@ -1,26 +1,32 @@
 *** Settings ***
 Library    SeleniumLibrary
+Resource    ../Resources/PO/LandingPage.robot
+Resource    ../Resources/PO/Cart.robot
+Resource    ../Resources/PO/Product.robot
+Resource    ../Resources/PO/SearchResults.robot
+Resource    ../Resources/PO/SignIn.robot
+Resource    ../Resources/PO/TopNav.robot
 
 *** Keywords ***
 
 Search for products
-    go to    http://www.amazon.in
-    wait until element is visible    xpath=//*[@id="nav-search-submit-button"]
-    input text    id=twotabsearchtextbox    ferrari 458
-    click button    id=nav-search-submit-button
-    wait until page contains    results for "ferrari 458"
+    LandingPage.Load
+    LandingPage.Verify Page Loaded
+    TopNav.Search for Products
+    SearchResults.Verify Search Completed
 
 Select product from search results
-    click element    xpath=//*[@id="search"]/div[1]/div[1]/div/span[3]/div[2]/div[2]/div/div/div/div/div/div/div[2]/div[1]/h2/a
+    SearchResults.Click Product Link
     switch window    new
-    wait until page contains    Back to results
+    Product.Verify Page Loaded
 
 Add product to cart
-    click button    id=add-to-cart-button
-    wait until page contains    Added to Cart
+    Product.Add to cart
+    Cart.Verify Product Added
 
 Proceed to check out
     sleep    3s
-    click element    name=proceedToRetailCheckout
+    Cart.Proceed to Checkout
+    SignIn.Verify Page Loaded
 
 

@@ -9,3 +9,7 @@ console.warn: SearchSettings: "get: No settings file exists, new profile?" (new 
 DevTools listening on ws://127.0.0.1:63058/devtools/browser/49f53c61-53f7-43cb-aca2-ebbd9ae3a7c5
 JavaScript error: , line 0: NotFoundError: Could not move source file(C:\Users\arpit\AppData\Local\Temp\rust_mozprofilebcCtS5\bookmarkbackups\bookmarks-2022-10-25.jsonlz4) because it does not exist
 JavaScript error: , line 0: NotFoundError: Could not move source file(C:\Users\arpit\AppData\Local\Temp\rust_mozprofilebcCtS5\bookmarkbackups\bookmarks-2022-10-25.jsonlz4) because it does not exist
+JavaScript error: , line 0: NS_ERROR_NOT_AVAILABLE
+JavaScript error: , line 0: NS_ERROR_NOT_AVAILABLE
+1666927761787	Marionette	INFO	Stopped listening on port 63067
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
