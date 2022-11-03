@@ -9,6 +9,9 @@ Suite Teardown    Cleanup Testing Data
 
 *** Variables ***
 # add you variables here
+${BROWSER} =    chrome
+${START_URL} =    http://www.amazon.in
+${SEARCH_TERM} =    ferrari 458
 
 *** Test Cases ***
 User must sign in to check out
